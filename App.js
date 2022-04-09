@@ -1,4 +1,4 @@
-import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 
 export default function App() {
@@ -14,6 +14,16 @@ export default function App() {
         onPress={handlePress}>
         {longText}
       </Text>
+      <Image source={require('./testimage.jpg')} />
+      <Image
+        blurRadius={5}
+        fadeDuration={1000}
+        source={{
+          width: 200,
+          height: 200,
+          uri: 'https://picsum.photos/seed/picsum/200/300',
+        }}
+      />
     </SafeAreaView>
   );
 }
