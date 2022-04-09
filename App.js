@@ -1,13 +1,19 @@
-import {View, Text} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
 import React from 'react';
-import {SafeAreaView} from 'react-native';
 
 export default function App() {
-  let a = 1;
-  console.log(a);
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       <Text>Hello Gokul</Text>
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: 'dodgerblue',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
