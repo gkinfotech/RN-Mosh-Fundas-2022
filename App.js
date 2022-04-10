@@ -8,21 +8,17 @@ export default function App() {
       {text: 'Yes', onPress: () => console.log('Yes Button tapped')},
       {text: 'No', onPress: () => console.log('No Button tapped')},
     ]);
+  const containerStyle = {backgroundColor: 'orange'};
   return (
-    <SafeAreaView style={styles.container}>
+    //StyleSheet validates the input object
+    // We can also declare the separate style like containerStyle (const containerStyle = {backgroundColor: 'orange'};)
+    // The main advantages here if we did any typo using declare technique it wont validate App will run but stylesheet always expect the input and output
+    //Array of styles style={[styles.container,containerStyle]} -> result is combination of two styles Right style(containerStyle) overrides the properties of left style(container)
+    <SafeAreaView style={[styles.container, containerStyle]}>
       <Button title="Click Me!" onPress={handleAlert} />
-      <Button
-        title="Input Prompt"
-        onPress={() =>
-          Alert.prompt('Prompt Title', 'Prompt Description', text =>
-            console.log(text),
-          )
-        }
-      />
     </SafeAreaView>
   );
 }
-
 const styles = StyleSheet.create({
   container: {
     flex: 1,
