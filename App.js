@@ -1,45 +1,43 @@
 import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 
-export default function App() {
-  // 9- Absolute and Relative position
-  //Absolute -> the view aligned to parent for eg: if we set position:'absolute' the view will moving towards to the parent
-  //Relative -> the view wont be check for parent it will align the view relative to the position
+import WelcomeScreen from './app/screens/WelcomeScreen';
+import ViewImageScreen from './app/screens/ViewImageScreen';
 
-  return (
+export default function App() {
+  //Excercise 01 Login Screen
+  return <ViewImageScreen />;
+}
+
+/*
     <View style={styles.container}>
+      <Image
+        style={{
+          width: '30%',
+          height: '20%',
+          alignSelf: 'center',
+          resizeMode: 'stretch',
+          marginTop: 40,
+        }}
+        source={require('./app/assets/logo-red.png')}
+      />
+      <Image
+        style={{width: '100%', flex: 5}}
+        source={require('./app/assets/background.jpg')}
+      />
+
+      <View style={{backgroundColor: 'tomato', flex: 0.5}} />
       <View
         style={{
           backgroundColor: 'dodgerblue',
-          // flexBasis: 100, // width or Height
-          // flexGrow: 1,
-          width: 400,
-          flexShrink: 1,
-          height: 100,
-          //alignSelf: 'center',
+          flex: 0.5,
         }}
       />
-      <View
-        style={{
-          backgroundColor: 'gold',
-          width: 100,
-          height: 100,
-          top: 20,
-          left: 20,
-          position: 'absolute',
-        }}
-      />
-      <View style={{backgroundColor: 'tomato', width: 100, height: 100}} />
     </View>
-  );
-}
-
-const styles = StyleSheet.create({
+    const styles = StyleSheet.create({
   container: {
     backgroundColor: '#ffff',
     flex: 1,
-    flexDirection: 'row', // horizontal
-    justifyContent: 'center', // main Axis
-    alignItems: 'center', //secondary Axis
   },
 });
+*/
