@@ -2,10 +2,9 @@ import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 
 export default function App() {
-  // 8- Flexbox- flexBasis, flexGrow and flexShrink
-  //flexBasis -> Similar to height or width
-  //FleGrow - >Similar to Flex value
-  //FlexShrink -> if the view is overflowing then shrink the view and also if we give Flex =-1 it is equal to flexshrink-1
+  // 9- Absolute and Relative position
+  //Absolute -> the view aligned to parent for eg: if we set position:'absolute' the view will moving towards to the parent
+  //Relative -> the view wont be check for parent it will align the view relative to the position
 
   return (
     <View style={styles.container}>
@@ -20,7 +19,16 @@ export default function App() {
           //alignSelf: 'center',
         }}
       />
-      <View style={{backgroundColor: 'gold', width: 100, height: 100}} />
+      <View
+        style={{
+          backgroundColor: 'gold',
+          width: 100,
+          height: 100,
+          top: 20,
+          left: 20,
+          position: 'absolute',
+        }}
+      />
       <View style={{backgroundColor: 'tomato', width: 100, height: 100}} />
     </View>
   );
