@@ -2,31 +2,23 @@ import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 
 export default function App() {
-  //04. Padding VS Margin
-  // Padding: space inside the view
-  // Margin: Space Ouside the view
+  //05. Test Style
+  //Styling props=> Android: fontFamily: 'Roboto'| IOS 'Courier'
   return (
     <View style={styles.container}>
-      <View
+      <Text
         style={{
-          backgroundColor: 'dodgerblue',
-          width: 100,
-          height: 100,
-          shadowColor: 'grey',
-          shadowOffset: {width: 0, height: 10},
-          shadowOpacity: 1,
-          shadowRadius: 10,
-          elevation: 30,
+          fontSize: 30,
+          fontStyle: 'italic',
+          fontFamily: 'Courier',
+          color: 'tomato',
+          textTransform: 'capitalize',
+          textDecorationLine: 'line-through',
+          textAlign: 'center',
+          lineHeight: 30,
         }}>
-        <View
-          style={{
-            backgroundColor: 'gold',
-            width: 50,
-            height: 50,
-            paddingHorizontal: 10,
-          }}
-        />
-      </View>
+        I Like React Native
+      </Text>
     </View>
   );
 }
