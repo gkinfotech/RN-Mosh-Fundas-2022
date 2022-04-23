@@ -2,10 +2,9 @@ import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 
 export default function App() {
-  //03. Shadows
-  // To make view as circle widhr,Height100 and borderRadius=50
-  // IOS -> Shadow Radius
-  //Android -> elevation
+  //04. Padding VS Margin
+  // Padding: space inside the view
+  // Margin: Space Ouside the view
   return (
     <View style={styles.container}>
       <View
@@ -18,8 +17,16 @@ export default function App() {
           shadowOpacity: 1,
           shadowRadius: 10,
           elevation: 30,
-        }}
-      />
+        }}>
+        <View
+          style={{
+            backgroundColor: 'gold',
+            width: 50,
+            height: 50,
+            paddingHorizontal: 10,
+          }}
+        />
+      </View>
     </View>
   );
 }
