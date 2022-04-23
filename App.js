@@ -1,24 +1,14 @@
 import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
 import React from 'react';
 
+import AppText from './app/components/AppText';
+
 export default function App() {
-  //05. Test Style
-  //Styling props=> Android: fontFamily: 'Roboto'| IOS 'Courier'
+  //06 Encapsulating the text style
+  // Custom Text Components
   return (
     <View style={styles.container}>
-      <Text
-        style={{
-          fontSize: 30,
-          fontStyle: 'italic',
-          fontFamily: 'Courier',
-          color: 'tomato',
-          textTransform: 'capitalize',
-          textDecorationLine: 'line-through',
-          textAlign: 'center',
-          lineHeight: 30,
-        }}>
-        I Like React Native
-      </Text>
+      <AppText>I Like React Native</AppText>
     </View>
   );
 }
