@@ -3,13 +3,19 @@ import React from 'react';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
+import AppButton from './app/components/AppButton';
 
 export default function App() {
   //Excercise 01 Login Screen
-  return <ViewImageScreen />;
+  return <WelcomeScreen />;
 }
 
 /*
+ <View style={{flex: 1, justifyContent: 'center', alignItems: 'center'}}>
+      <AppButton title="Login" onPress={() => console.log('Button Pressed!')} />
+    </View>
+
+
     <View style={styles.container}>
       <Image
         style={{
