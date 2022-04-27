@@ -9,7 +9,7 @@ const ViewImageScreen = () => {
       <View style={styles.closeIcon}></View>
       <View style={styles.deleteIcon}></View>
       <Image
-        resizeMode="contain"
+        resizeMode="center"
         style={styles.imageContainer}
         source={require('../assets/chair.jpg')}
       />

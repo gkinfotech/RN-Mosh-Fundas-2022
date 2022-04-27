@@ -9,7 +9,7 @@ import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import colors from './app/config/colors';
 
 export default function App() {
-  //Excercise 03 Card Component
+  //Excercise 05 ListDetailScreen
   return (
     <ListingDetailsScreen
       title="Red jacket for Sale"
@@ -71,5 +71,12 @@ export default function App() {
         image={require('./app/assets/jacket.jpg')}
       />
     </View>
+
+
+    05-Listing Details Screen  <ListingDetailsScreen
+      title="Red jacket for Sale"
+      SubTitle="$100"
+      image={require('./app/assets/jacket.jpg')}
+    />
 
 */
