@@ -1,0 +1,39 @@
+import {StyleSheet, Text, View, Image} from 'react-native';
+import React from 'react';
+import colors from '../config/colors';
+import AppText from '../components/AppText';
+
+export default function ListingDetailsScreen({image, title, SubTitle}) {
+  return (
+    <View style={styles.container}>
+      <Image style={styles.image} source={image} />
+      <View style={styles.detailsContainer}>
+        <AppText style={styles.title}>{title}</AppText>
+        <AppText style={styles.price}>{SubTitle}</AppText>
+      </View>
+    </View>
+  );
+}
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: colors.white,
+  },
+  detailsContainer: {
+    padding: 20,
+  },
+  image: {
+    width: '100%',
+    height: 300,
+  },
+  price: {
+    color: colors.secondary,
+    fontWeight: 'bold',
+    fontSize: 20,
+    marginVertical: 10,
+  },
+  title: {
+    fontSize: 24,
+    fontWeight: '500',
+  },
+});

@@ -5,23 +5,17 @@ import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
+import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import colors from './app/config/colors';
 
 export default function App() {
   //Excercise 03 Card Component
   return (
-    <View
-      style={{
-        backgroundColor: colors.lightGrey,
-        padding: 20,
-        paddingTop: 100,
-      }}>
-      <Card
-        title="Red jacket for $2"
-        subTitle="$100"
-        image={require('./app/assets/jacket.jpg')}
-      />
-    </View>
+    <ListingDetailsScreen
+      title="Red jacket for Sale"
+      SubTitle="$100"
+      image={require('./app/assets/jacket.jpg')}
+    />
   );
 }
 
@@ -61,4 +55,21 @@ export default function App() {
     flex: 1,
   },
 });
+*/
+
+/*
+04- Card Components
+  <View
+      style={{
+        backgroundColor: colors.lightGrey,
+        padding: 20,
+        paddingTop: 100,
+      }}>
+      <Card
+        title="Red jacket for $2"
+        subTitle="$100"
+        image={require('./app/assets/jacket.jpg')}
+      />
+    </View>
+
 */
