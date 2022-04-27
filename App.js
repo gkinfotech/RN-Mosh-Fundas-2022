@@ -4,10 +4,25 @@ import React from 'react';
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
 import AppButton from './app/components/AppButton';
+import Card from './app/components/Card';
+import colors from './app/config/colors';
 
 export default function App() {
-  //Excercise 01 Login Screen
-  return <WelcomeScreen />;
+  //Excercise 03 Card Component
+  return (
+    <View
+      style={{
+        backgroundColor: colors.lightGrey,
+        padding: 20,
+        paddingTop: 100,
+      }}>
+      <Card
+        title="Red jacket for $2"
+        subTitle="$100"
+        image={require('./app/assets/jacket.jpg')}
+      />
+    </View>
+  );
 }
 
 /*
