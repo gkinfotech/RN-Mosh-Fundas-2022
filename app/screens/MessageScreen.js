@@ -11,6 +11,7 @@ import {
 import React from 'react';
 import ListItem from '../components/ListItem';
 import Screens from '../components/Screens';
+import ListItemSeparator from '../components/ListItemSeparator';
 
 const messages = [
   {
@@ -43,6 +44,7 @@ export default function MessageScreen() {
           />
         </Screens>
       )}
+      ItemSeparatorComponent={ListItemSeparator}
     />
   );
 }
