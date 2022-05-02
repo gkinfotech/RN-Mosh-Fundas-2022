@@ -41,6 +41,7 @@ export default function MessageScreen() {
             title={item.title}
             subTitle={item.description}
             image={item.image}
+            onPress={() => console.log(item)}
           />
         </Screens>
       )}
