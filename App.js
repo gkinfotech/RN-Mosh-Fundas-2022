@@ -7,10 +7,11 @@ import AppButton from './app/components/AppButton';
 import Card from './app/components/Card';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import colors from './app/config/colors';
+import MessageScreen from './app/screens/MessageScreen';
 
 export default function App() {
   //Excercise 06 Improve ViewImageScreen
-  return <ViewImageScreen />;
+  return <MessageScreen />;
 }
 
 /*
