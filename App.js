@@ -9,14 +9,8 @@ import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import colors from './app/config/colors';
 
 export default function App() {
-  //Excercise 05 ListDetailScreen
-  return (
-    <ListingDetailsScreen
-      title="Red jacket for Sale"
-      SubTitle="$100"
-      image={require('./app/assets/jacket.jpg')}
-    />
-  );
+  //Excercise 06 Improve ViewImageScreen
+  return <ViewImageScreen />;
 }
 
 /*
