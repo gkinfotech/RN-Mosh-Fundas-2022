@@ -8,13 +8,13 @@ import {
   Dimensions,
   Platform,
 } from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 import ListItem from '../components/ListItem';
 import Screens from '../components/Screens';
 import ListItemSeparator from '../components/ListItemSeparator';
 import ListItemDeleteAction from '../components/ListItemDeleteAction';
 
-const messages = [
+const initialMessages = [
   {
     id: 1,
     title: 'T1',
@@ -30,25 +30,33 @@ const messages = [
 ];
 
 export default function MessageScreen() {
-  console.log('Test', StatusBar.currentHeight);
-  console.log('Test1', Dimensions.get('window').height);
+  // console.log('Test', StatusBar.currentHeight);
+  // console.log('Test1', Dimensions.get('window').height);
+  const [messsages, setMessages] = useState(initialMessages);
+  const handleDelete = message => {
+    //1. Delete message from message array
+    setMessages(messsages.filter(m => m.id !== message.id));
+    //2.Call the server
+  };
   return (
-    <FlatList
-      data={messages}
-      keyExtractor={message => message.id.toString()}
-      renderItem={({item}) => (
-        <Screens>
+    <Screens>
+      <FlatList
+        data={messsages}
+        keyExtractor={message => message.id.toString()}
+        renderItem={({item}) => (
           <ListItem
             title={item.title}
             subTitle={item.description}
             image={item.image}
             onPress={() => console.log(item)}
-            renderRightActions={ListItemDeleteAction}
+            renderRightActions={() => (
+              <ListItemDeleteAction onPress={() => handleDelete(item)} />
+            )}
           />
-        </Screens>
-      )}
-      ItemSeparatorComponent={ListItemSeparator}
-    />
+        )}
+        ItemSeparatorComponent={ListItemSeparator}
+      />
+    </Screens>
   );
 }
 
