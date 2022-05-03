@@ -22,13 +22,16 @@ import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
 import {TextInput} from 'react-native-gesture-handler';
 import AppTextInput from './app/components/AppTextInput';
+import AppPicker from './app/components/AppPicker';
+import AppText from './app/components/AppText';
 // Added Switch Button
 //By default switch button display in left corner side and Android Right corner side
 export default function App() {
   const [isNew, setIsNew] = useState(false);
   return (
     <Screens>
-      <Switch value={isNew} onValueChange={newValue => setIsNew(newValue)} />
+      <AppPicker icon="apps" placeholder="Category" />
+      <AppTextInput icon="email" placeholder="Email" />
     </Screens>
   );
 }
