@@ -8,10 +8,16 @@ import Card from './app/components/Card';
 import ListingDetailsScreen from './app/screens/ListingDetailsScreen';
 import colors from './app/config/colors';
 import MessageScreen from './app/screens/MessageScreen';
+import Screens from './app/components/Screens';
+import Icon from './app/components/Icon';
 
 export default function App() {
   //Excercise 06 Improve ViewImageScreen
-  return <MessageScreen />;
+  return (
+    <Screens>
+      <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
+    </Screens>
+  );
 }
 
 /*
