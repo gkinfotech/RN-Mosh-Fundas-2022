@@ -1,4 +1,11 @@
-import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
+import {
+  View,
+  Text,
+  StyleSheet,
+  SafeAreaView,
+  Image,
+  Switch,
+} from 'react-native';
 import React, {useState} from 'react';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -15,12 +22,13 @@ import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
 import {TextInput} from 'react-native-gesture-handler';
 import AppTextInput from './app/components/AppTextInput';
-
+// Added Switch Button
+//By default switch button display in left corner side and Android Right corner side
 export default function App() {
-  const [firstName, setfirstName] = useState('');
+  const [isNew, setIsNew] = useState(false);
   return (
     <Screens>
-      <AppTextInput placeholder="UserName" icon="email" />
+      <Switch value={isNew} onValueChange={newValue => setIsNew(newValue)} />
     </Screens>
   );
 }
