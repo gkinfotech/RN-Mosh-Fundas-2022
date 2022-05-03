@@ -14,18 +14,13 @@ import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
 import {TextInput} from 'react-native-gesture-handler';
+import AppTextInput from './app/components/AppTextInput';
 
 export default function App() {
   const [firstName, setfirstName] = useState('');
   return (
     <Screens>
-      <Text>{firstName}</Text>
-      <TextInput
-      secureTextEntry
-        placeholder="Enter the Text Input"
-        onChangeText={text => setfirstName(text)}
-        style={{borderBottomColor: colors.lightGrey, borderBottomWidth: 1}}
-      />
+      <AppTextInput placeholder="UserName" icon="email" />
     </Screens>
   );
 }
@@ -104,6 +99,18 @@ export default function App() {
             iconColor="white"
           />
         }
+      />
+    </Screens>
+
+    TextInput
+
+    <Screens>
+      <Text>{firstName}</Text>
+      <TextInput
+      secureTextEntry
+        placeholder="Enter the Text Input"
+        onChangeText={text => setfirstName(text)}
+        style={{borderBottomColor: colors.lightGrey, borderBottomWidth: 1}}
       />
     </Screens>
 */
