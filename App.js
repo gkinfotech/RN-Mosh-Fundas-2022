@@ -10,12 +10,23 @@ import colors from './app/config/colors';
 import MessageScreen from './app/screens/MessageScreen';
 import Screens from './app/components/Screens';
 import Icon from './app/components/Icon';
+import ListItem from './app/components/ListItem';
 
 export default function App() {
   //Excercise 06 Improve ViewImageScreen
   return (
     <Screens>
-      <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
+      <ListItem
+        title="GokulaKrishnan E"
+        ImageComponent={
+          <Icon
+            name="email"
+            size={50}
+            backgroundColor="red"
+            iconColor="white"
+          />
+        }
+      />
     </Screens>
   );
 }
@@ -80,4 +91,6 @@ export default function App() {
       image={require('./app/assets/jacket.jpg')}
     />
 
+
+     <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
 */
