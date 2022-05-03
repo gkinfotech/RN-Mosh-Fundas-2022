@@ -11,24 +11,11 @@ import MessageScreen from './app/screens/MessageScreen';
 import Screens from './app/components/Screens';
 import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
+import AccountScreen from './app/screens/AccountScreen';
 
 export default function App() {
   //Excercise 06 Improve ViewImageScreen
-  return (
-    <Screens>
-      <ListItem
-        title="GokulaKrishnan E"
-        ImageComponent={
-          <Icon
-            name="email"
-            size={50}
-            backgroundColor="red"
-            iconColor="white"
-          />
-        }
-      />
-    </Screens>
-  );
+  return <AccountScreen />;
 }
 
 /*
@@ -93,4 +80,18 @@ export default function App() {
 
 
      <Icon name="email" size={50} backgroundColor="red" iconColor="white" />
+
+      <Screens>
+      <ListItem
+        title="GokulaKrishnan E"
+        ImageComponent={
+          <Icon
+            name="email"
+            size={50}
+            backgroundColor="red"
+            iconColor="white"
+          />
+        }
+      />
+    </Screens>
 */
