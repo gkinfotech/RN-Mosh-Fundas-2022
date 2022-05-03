@@ -12,6 +12,7 @@ import React from 'react';
 import ListItem from '../components/ListItem';
 import Screens from '../components/Screens';
 import ListItemSeparator from '../components/ListItemSeparator';
+import ListItemDeleteAction from '../components/ListItemDeleteAction';
 
 const messages = [
   {
@@ -42,6 +43,7 @@ export default function MessageScreen() {
             subTitle={item.description}
             image={item.image}
             onPress={() => console.log(item)}
+            renderRightActions={ListItemDeleteAction}
           />
         </Screens>
       )}
