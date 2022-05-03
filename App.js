@@ -12,10 +12,10 @@ import Screens from './app/components/Screens';
 import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
+import ListingScreen from './app/screens/ListingScreen';
 
 export default function App() {
-  //Excercise 06 Improve ViewImageScreen
-  return <AccountScreen />;
+  return <ListingScreen />;
 }
 
 /*
