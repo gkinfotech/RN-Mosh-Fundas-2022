@@ -33,6 +33,7 @@ export default function MessageScreen() {
   // console.log('Test', StatusBar.currentHeight);
   // console.log('Test1', Dimensions.get('window').height);
   const [messsages, setMessages] = useState(initialMessages);
+  const [refreshing, setRefreshing] = useState(false);
   const handleDelete = message => {
     //1. Delete message from message array
     setMessages(messsages.filter(m => m.id !== message.id));
@@ -55,6 +56,17 @@ export default function MessageScreen() {
           />
         )}
         ItemSeparatorComponent={ListItemSeparator}
+        refreshing={refreshing}
+        onRefresh={() => {
+          setMessages([
+            {
+              id: 2,
+              title: 'T2',
+              description: 'D2',
+              image: require('../assets/mosh.jpg'),
+            },
+          ]);
+        }}
       />
     </Screens>
   );

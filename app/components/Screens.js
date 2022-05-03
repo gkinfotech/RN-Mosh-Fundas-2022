@@ -15,5 +15,6 @@ export default function Screens({children}) {
 const styles = StyleSheet.create({
   screen: {
     paddingTop: Platform.OS === 'android' ? 0 : StatusBar.currentHeight,
+    flex:1
   },
 });
