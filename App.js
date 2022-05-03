@@ -1,5 +1,5 @@
 import {View, Text, StyleSheet, SafeAreaView, Image} from 'react-native';
-import React from 'react';
+import React, {useState} from 'react';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
 import ViewImageScreen from './app/screens/ViewImageScreen';
@@ -13,9 +13,21 @@ import Icon from './app/components/Icon';
 import ListItem from './app/components/ListItem';
 import AccountScreen from './app/screens/AccountScreen';
 import ListingScreen from './app/screens/ListingScreen';
+import {TextInput} from 'react-native-gesture-handler';
 
 export default function App() {
-  return <ListingScreen />;
+  const [firstName, setfirstName] = useState('');
+  return (
+    <Screens>
+      <Text>{firstName}</Text>
+      <TextInput
+      secureTextEntry
+        placeholder="Enter the Text Input"
+        onChangeText={text => setfirstName(text)}
+        style={{borderBottomColor: colors.lightGrey, borderBottomWidth: 1}}
+      />
+    </Screens>
+  );
 }
 
 /*
