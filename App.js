@@ -17,27 +17,10 @@ import {TextInput} from 'react-native-gesture-handler';
 import AppTextInput from './app/components/AppTextInput';
 import AppPicker from './app/components/AppPicker';
 import AppText from './app/components/AppText';
-// Added Switch Button
-//By default switch button display in left corner side and Android Right corner side
-const categories = [
-  {label: 'Furniture', value: 1},
-  {label: 'Clothing', value: 2},
-  {label: 'Cameras', value: 3},
-];
+import LoginScreen from './app/screens/LoginScreen';
+
 export default function App() {
-  const [category, setCategory] = useState(categories);
-  return (
-    <Screens>
-      <AppPicker
-        selctedItem={category}
-        onSelectItem={item => setCategory(item)}
-        items={categories}
-        icon="apps"
-        placeholder="Category"
-      />
-      <AppTextInput icon="email" placeholder="Email" />
-    </Screens>
-  );
+  return <LoginScreen />;
 }
 
 /*
@@ -128,4 +111,24 @@ export default function App() {
         style={{borderBottomColor: colors.lightGrey, borderBottomWidth: 1}}
       />
     </Screens>
+
+Custom modal
+    // Added Switch Button
+//By default switch button display in left corner side and Android Right corner side
+const categories = [
+  {label: 'Furniture', value: 1},
+  {label: 'Clothing', value: 2},
+  {label: 'Cameras', value: 3},
+];
+     <Screens>
+      <AppPicker
+        selctedItem={category}
+        onSelectItem={item => setCategory(item)}
+        items={categories}
+        icon="apps"
+        placeholder="Category"
+      />
+      <AppTextInput icon="email" placeholder="Email" />
+    </Screens>
+  );
 */
