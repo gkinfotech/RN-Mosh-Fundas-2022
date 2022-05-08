@@ -1,11 +1,4 @@
-import {
-  View,
-  Text,
-  StyleSheet,
-  SafeAreaView,
-  Image,
-  Switch,
-} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, Image, Switch} from 'react-native';
 import React, {useState} from 'react';
 
 import WelcomeScreen from './app/screens/WelcomeScreen';
@@ -26,11 +19,22 @@ import AppPicker from './app/components/AppPicker';
 import AppText from './app/components/AppText';
 // Added Switch Button
 //By default switch button display in left corner side and Android Right corner side
+const categories = [
+  {label: 'Furniture', value: 1},
+  {label: 'Clothing', value: 2},
+  {label: 'Cameras', value: 3},
+];
 export default function App() {
-  const [isNew, setIsNew] = useState(false);
+  const [category, setCategory] = useState(categories);
   return (
     <Screens>
-      <AppPicker icon="apps" placeholder="Category" />
+      <AppPicker
+        selctedItem={category}
+        onSelectItem={item => setCategory(item)}
+        items={categories}
+        icon="apps"
+        placeholder="Category"
+      />
       <AppTextInput icon="email" placeholder="Email" />
     </Screens>
   );

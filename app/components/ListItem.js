@@ -5,14 +5,7 @@ import colors from '../config/colors';
 //import Swipeable from 'react-native-gesture-handler/Swipeable';
 import {GestureHandlerRootView, Swipeable} from 'react-native-gesture-handler';
 
-export default function ListItem({
-  title,
-  subTitle,
-  image,
-  onPress,
-  renderRightActions,
-  IconComponent,
-}) {
+export default function ListItem({title, subTitle, image, onPress, renderRightActions, IconComponent}) {
   return (
     <GestureHandlerRootView>
       <Swipeable renderRightActions={renderRightActions}>
@@ -22,9 +15,7 @@ export default function ListItem({
             {image && <Image style={styles.image} source={image} />}
             <View style={styles.textContainer}>
               <AppText style={styles.title}>{title}</AppText>
-              {subTitle && (
-                <AppText style={styles.subtitle}>{subTitle}</AppText>
-              )}
+              {subTitle && <AppText style={styles.subtitle}>{subTitle}</AppText>}
             </View>
           </View>
         </TouchableHighlight>
